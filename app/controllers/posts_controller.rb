@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @community = Community.find (params[:community_id])
     @post = Post.new
   end
 
@@ -18,7 +19,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
 
     if @post.save
-      redirect_to posts_path
+      redirect_to community_path(@post.community_id)
     else
       render :new
     end
