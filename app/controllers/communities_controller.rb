@@ -1,14 +1,15 @@
 class CommunitiesController < ApplicationController
-  before_authentification :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: %i[index show]
 
   def index
-    
+    @communities = Community.all
   end
 
   def show
   end
 
   def new
+    @community = Community.new
   end
 
   def create
