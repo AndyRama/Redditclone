@@ -4,5 +4,4 @@ class PagesController < ApplicationController
   def home
     @communities = Community.all.limit(5)
   end
-
 end
