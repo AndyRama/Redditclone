@@ -23,7 +23,12 @@
       <p class="h4">Popular Post</p>
       <div class="row">
         <div class="col-8">
-          Left col (wide)
+          <% @posts.each do |post| %>
+          <div class="card">
+            <h4><%= link_to post.title, community_post_path(@community_id, post) %></h4>
+            <p><%= truncate post.body, length:200 %></p>  
+          </div>
+          <%end %>          
         </div>
         <div class="col-4 mb-2">
           <p class="h5 mb-4">Up and coming Communities</p>

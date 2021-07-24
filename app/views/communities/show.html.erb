@@ -7,4 +7,6 @@
   <p><%= truncate post.body, length:200 %></p>  
 <%end %>
 
-<%= simple_format @community.rules %>
+<small>
+  <%= simple_format @community.rules %>
+</small>
