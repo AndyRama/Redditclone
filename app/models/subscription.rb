@@ -1,5 +1,5 @@
-class Subscribers < ApplicationRecord
-  belongs_to: user
-  belongs_to: community
+class Subscription < ApplicationRecord
+  belongs_to :user
+  belongs_to :community
 
 end
