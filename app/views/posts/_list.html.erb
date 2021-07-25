@@ -4,7 +4,7 @@
       <small>
         <%= link_to post.community.name %> Posted by 
         <%= link_to post.user.full_name%>
-        <%=time_ago_in_words post.created_at%> ago.
+        <%= time_ago_in_words post.created_at%> ago.
       </small>
     </p>
     <h4><%= link_to post.title, community_post_path(post.community_id, post) %></h4>
