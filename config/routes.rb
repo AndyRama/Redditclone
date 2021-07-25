@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  # get "u/:username" => "pages#profile", as: :profile
+  get "u/:username" => "pages#profile", as: :profile
 
   resources :communities do
     resources :posts

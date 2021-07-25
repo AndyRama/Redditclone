@@ -1,10 +1,11 @@
 <div class="row">
   <div class="class col-sm-8">
+    <%= render partial: "posts/list", local: { posts: @posts} %>
   </div>
   <div class="col-sm-4">
-    <%= @profile.full_name %>
-    <%= @profile.username %>
-
-    <p>Cake day<%= @profile.created_at.strftime("%d/%M/%Y") %></p>
+    <p class="h4"><%= @profile.full_name %></p>  
+    <p><%= @profile.username %></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quis quo aliquam amet error earum voluptas iste quae labore reiciendis est ad facere quos placeat, reprehenderit iure officia magnam! Molestiae.</p>
+    <p>Cake day: <%= @profile.created_at.strftime("%d/%m/%Y") %></p>
   </div>
 </div>

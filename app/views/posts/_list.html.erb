@@ -3,7 +3,8 @@
     <p>
       <small>
         <%= link_to post.community.name %> Posted by 
-        <%= link_to post.user.full_name%>
+        <%#= link_to post.user.full_name%>
+        <%= link_to post.user.full_name, profile_path(post.user.username)%>
         <%= time_ago_in_words post.created_at%> ago.
       </small>
     </p>
