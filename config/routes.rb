@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :subscriptions
-  resources :comments, only:[:create]
+  resources :comments, only:[:create], only: [:create], defaults: { format: 'js' }
   
   root to: 'pages#home'
 end
