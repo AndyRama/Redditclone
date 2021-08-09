@@ -10,7 +10,6 @@ class CommunitiesController < ApplicationController
     @posts = @community.posts
     @subscriber_count = @community.subscribers.count
     @subscription = Subscription.new
-    # @subscription = user_signed_in? ? Subscription.where(community_id)
   end
 
   def new
