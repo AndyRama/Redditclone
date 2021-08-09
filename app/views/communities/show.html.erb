@@ -8,8 +8,8 @@
     <% else %>
       <%= render partial:"communities/subscribe", locals: { community_id: @community.id } %>
     <% end %>  
+  </div>
 </div>  
-</div>
 <div class="row">
   <div class="col-sm-8">
     <%= render partial: "posts/list", locals:{ posts: @posts } %>
