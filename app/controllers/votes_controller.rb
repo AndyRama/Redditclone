@@ -1,10 +1,13 @@
-class VoteController < Applicationcontroller
+class VotesController < ApplicationController
   def create
-    vote = Vote.new( vote_params )
-    vote.user_id = current_user_id
+    #post_id = params[:vote][:post_id]
+    post_id = params[:post_id]
+    vote = Vote.new
+    vote.post_id = params[:post_id]
+    vote.user_id = current_user.id
   end
 
-  existing_vote = Vote.where(user_id: current_user_id, post_id: params[:vote] [:post_id]
+  existing_vote = Vote.where(user_id: current_user.id, post_id: params[:vote] [:post_id]
   
   respond_to do |format|
     format.js {
@@ -24,7 +27,7 @@ class VoteController < Applicationcontroller
         @total_downvotes = @post.downvotes
       end
       
-      render "vote/create"
+      render "votes/create"
     
     }
   end
