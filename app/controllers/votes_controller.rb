@@ -1,6 +1,5 @@
 class VotesController < ApplicationController
   def create
-    #post_id = params[:vote][:post_id]
     post_id = params[:post_id]
     vote = Vote.new
     vote.post_id = params[:post_id]
@@ -27,7 +26,7 @@ class VotesController < ApplicationController
         @total_downvotes = @post.downvotes
       end
       
-      render "votes/create"
+      render "vote/create"
     
     }
   end
